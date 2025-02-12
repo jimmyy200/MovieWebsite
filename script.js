@@ -22,6 +22,12 @@ function showMovies(data){
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
             <img src='${img_url+poster_path}' alt="img">
+            
+            <div>
+                ${title}: ${overview}
+                <br>
+                Rating: ${vote_average}
+            </div>
         `
         main.appendChild(movieEl);
     })
