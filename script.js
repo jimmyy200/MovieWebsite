@@ -20,7 +20,18 @@ function showMovies(data){
         const {title, poster_path, vote_average, overview, id} = movie;
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
-        movieEl.innerHTML = "<img src='' alt='img'>"
+        movieEl.innerHTML = `
+            <img src='${img_url+poster_path}' alt="img">
+        `
         main.appendChild(movieEl);
     })
 }
+
+searchBox.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const searchMovie = search.value;
+
+    if(searchMovie){
+        fetchMovies(searchURL + '&query=' + searchMovie);
+    }
+})
