@@ -1,0 +1,25 @@
+body{
+    background-image: linear-gradient(rgb(166, 162, 162), rgb(167, 160, 160));
+}
+
+#searchBox{
+    display: flex;
+    justify-self: center;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.poster{
+    width: 20vw;
+}
+
+.description{
+    width: 20vw;
+}
+
