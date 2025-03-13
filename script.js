@@ -3,6 +3,8 @@ const base_url = "https://api.themoviedb.org/3";
 const api_url = base_url + "/discover/movie?sort_by=popularity.desc&" + api_key;
 const img_url = "https://image.tmdb.org/t/p/w500";
 const searchURL = base_url + "/search/movie?" + api_key;
+const sortURL = base_url + "/discover/movie?";
+
 
 fetchMovies(api_url);
 
@@ -43,5 +45,14 @@ searchBox.addEventListener('submit', (e) =>{
 
     if(searchMovie){
         fetchMovies(searchURL + '&query=' + searchMovie);
+    }
+})
+
+menuBox.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const sortMovie = menu.value;
+
+    if (sortMovie == 'top-rated'){
+        fetchMovies(sortURL + 'sort_by=' + 'vote_average.desc' + '&' + api_key + '&vote_count.gte=50');
     }
 })
