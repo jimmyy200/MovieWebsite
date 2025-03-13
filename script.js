@@ -21,10 +21,12 @@ function showMovies(data){
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
-            <img src='${img_url+poster_path}' alt="img" class="poster">
+            <img src='${img_url+poster_path}' alt="img not found" class="poster">
             
             <div class="description">
-                ${title}: ${overview}
+                <span id="title"> ${title} </span>
+                <br> 
+                ${overview}
                 <br>
                 <span id="rating">
                 Rating: ${vote_average}

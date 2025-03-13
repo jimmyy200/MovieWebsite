@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(rgb(166, 162, 162), rgb(167, 160, 160));
+    background-image: linear-gradient(rgb(207, 207, 192), rgb(178, 178, 141));
 }
 
 #searchBox{
@@ -20,6 +20,12 @@ body{
     width: 20vw;
 }
 
+#title{
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .description{
     width: 20vw;
 }
@@ -27,5 +33,9 @@ body{
 #rating{
     color: gold;
     text-shadow: 1px 1px 0 black;
+}
+
+.movie{
+    background-color: beige;
 }
 
