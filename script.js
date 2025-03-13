@@ -26,7 +26,9 @@ function showMovies(data){
             <div class="description">
                 ${title}: ${overview}
                 <br>
+                <span id="rating">
                 Rating: ${vote_average}
+                </span>
             </div>
         `
         main.appendChild(movieEl);

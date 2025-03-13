@@ -5,6 +5,7 @@ body{
 #searchBox{
     display: flex;
     justify-self: center;
+    border: 2px solid darkslateblue;
 }
 
 #main{
@@ -21,5 +22,10 @@ body{
 
 .description{
     width: 20vw;
+}
+
+#rating{
+    color: gold;
+    text-shadow: 1px 1px 0 black;
 }
 
