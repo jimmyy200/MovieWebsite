@@ -54,5 +54,13 @@ menuBox.addEventListener('submit', (e) =>{
 
     if (sortMovie == 'top-rated'){
         fetchMovies(sortURL + 'sort_by=' + 'vote_average.desc' + '&' + api_key + '&vote_count.gte=50');
+    } else if (sortMovie == 'lowest-rated'){
+        fetchMovies(sortURL + 'sort_by=' + 'vote_average.asc' + '&' + api_key + '&vote_count.gte=50');
+    } else if (sortMovie == 'least-pop'){
+        fetchMovies(sortURL + 'sort_by=' + 'popularity.asc' + '&' + api_key + '&vote_count.gte=50');
+    } else if (sortMovie == 'most-pop'){
+        fetchMovies(sortURL + 'sort_by=' + 'popularity.desc' + '&' + api_key + '&vote_count.gte=50');
+    } else if (sortMovie == 'none'){
+        fetchMovies(api_url);
     }
 })
